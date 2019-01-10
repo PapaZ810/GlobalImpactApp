@@ -14,15 +14,11 @@ public class ImpactViewController: UIViewController
     @IBOutlet weak var MapView: MKMapView!
     @IBAction func Button(_ sender: UIButton)
     {
-        let impactLocation = CLLocationCoordinate2D(latitude: 0, longitude: 0)
-        let mapSpan = MKCoordinateSpan(latitudeDelta: 10.05, longitudeDelta: 10.05)
+        let impactLocation = CLLocationCoordinate2D(latitude: 45.4215, longitude: -75.6972)
+        let mapSpan = MKCoordinateSpan(latitudeDelta: 1.05, longitudeDelta: 10.05)
         let impactRegion = MKCoordinateRegion(center: impactLocation, span: mapSpan)
         MapView.animatedZoom(zoomRegion: impactRegion, duration: 2.5)
     }
-    
-    
-    
-    
     
     public override func viewDidLoad() -> Void
     {
