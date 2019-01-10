@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Impact View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ImpactViewController" customModule="GlobalImpactApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="pXm-1f-VBI">
+                                <rect key="frame" x="0.0" y="20" width="375" height="284"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LcB-FA-Xxy">
+                                <rect key="frame" x="0.0" y="518" width="375" height="129"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YCZ-2k-8FN">
+                                <rect key="frame" x="0.0" y="382" width="375" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="7DR-L9-zbb"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rov-SX-juR">
+                                <rect key="frame" x="0.0" y="302" width="375" height="79"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="79" id="1hU-QJ-Yy4"/>
+                                </constraints>
+                                <state key="normal" title="Animate to Impact Area"/>
+                                <connections>
+                                    <action selector="Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="byt-OR-Gi1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Rov-SX-juR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="282" id="Fev-Q1-Np2"/>
+                            <constraint firstItem="Rov-SX-juR" firstAttribute="leading" secondItem="YCZ-2k-8FN" secondAttribute="leading" id="HeN-ZI-N5I"/>
+                            <constraint firstItem="YCZ-2k-8FN" firstAttribute="leading" secondItem="LcB-FA-Xxy" secondAttribute="leading" id="IGX-9m-73E"/>
+                            <constraint firstAttribute="trailing" secondItem="pXm-1f-VBI" secondAttribute="trailing" id="NdX-df-EIN"/>
+                            <constraint firstAttribute="bottom" secondItem="LcB-FA-Xxy" secondAttribute="bottom" constant="20" symbolic="YES" id="RIk-HZ-8Dy"/>
+                            <constraint firstItem="pXm-1f-VBI" firstAttribute="trailing" secondItem="Rov-SX-juR" secondAttribute="trailing" id="SST-rA-fmJ"/>
+                            <constraint firstItem="YCZ-2k-8FN" firstAttribute="top" secondItem="pXm-1f-VBI" secondAttribute="bottom" constant="78" id="VUi-Ej-GMt"/>
+                            <constraint firstItem="YCZ-2k-8FN" firstAttribute="trailing" secondItem="LcB-FA-Xxy" secondAttribute="trailing" id="WF7-60-ewr"/>
+                            <constraint firstItem="Rov-SX-juR" firstAttribute="trailing" secondItem="YCZ-2k-8FN" secondAttribute="trailing" id="bLi-y4-w1M"/>
+                            <constraint firstItem="pXm-1f-VBI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fHD-uX-7Sg"/>
+                            <constraint firstItem="pXm-1f-VBI" firstAttribute="leading" secondItem="Rov-SX-juR" secondAttribute="leading" id="jAO-Jo-vts"/>
+                            <constraint firstItem="LcB-FA-Xxy" firstAttribute="top" secondItem="YCZ-2k-8FN" secondAttribute="bottom" constant="8" symbolic="YES" id="lWM-e3-pMk"/>
+                            <constraint firstItem="pXm-1f-VBI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qPa-i1-rFE"/>
+                            <constraint firstItem="YCZ-2k-8FN" firstAttribute="top" secondItem="Rov-SX-juR" secondAttribute="bottom" constant="1" id="rJV-8L-wqW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="MapView" destination="pXm-1f-VBI" id="gox-nC-0bJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
